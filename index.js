@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import cors from "cors";
-import path from "path";
+//import path from "path";
 import AuthRoute from "./Routes/api/AuthRoute.js";
 import UserRoute from "./Routes/api/UserRoute.js";
 import ShopRoute from "./Routes/api/ShopRoute.js";
@@ -23,6 +23,7 @@ dotenv.config();
 
 //middleware
 //app.use(errorHandler);
+/*
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -30,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
-
+*/
 app.use(successMiddleware);
 app.use(cors({
     origin: "https://myshopmultivendor.onrender.com",
