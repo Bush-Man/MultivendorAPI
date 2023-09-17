@@ -68,7 +68,8 @@ export const loginUserController = async (req, res, next) => {
             id:otherDetails._id,
             isAdmin: otherDetails.isAdmin
         }, process.env.JWT_SEC, { expiresIn: "1day" });
-        res.cookie("authorization", token, {httpOnly: true}).status(200).json(otherDetails);//secure: true
+        res.cookie("authorization", token, {httpOnly: true,secure: true});
+        res.status(200).json(otherDetails);
 
     } catch (err) {
             
