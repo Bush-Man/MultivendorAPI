@@ -4,8 +4,7 @@ import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
 import cors from "cors";
-
-
+import path from "path";
 import AuthRoute from "./Routes/api/AuthRoute.js";
 import UserRoute from "./Routes/api/UserRoute.js";
 import ShopRoute from "./Routes/api/ShopRoute.js";
