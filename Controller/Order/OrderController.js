@@ -79,8 +79,8 @@ export const createOrder = async (req, res, next) => {
       payment_method_types: ["card"],
       mode: "payment",
       line_items: line_items,
-      success_url: "http://localhost:5173/success",
-      cancel_url: "http://localhost:5173/fail",
+      success_url: "https://myshopmultivendor.onrender.com/success",
+      cancel_url: "https://myshopmultivendor.onrender.com/fail",
     });
       
     const newValidOrder = await new OrderModel({ buyerId:req.user.id, shopId:dbshop._id, products: validProducts.map((prod) => ({
